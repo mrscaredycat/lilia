@@ -51,14 +51,7 @@
         }
 
         .music-container {
-            width: 50%; /* Reduz a largura */
-    padding: 5px; /* Diminui o espaço interno */
-    border-radius: 10px; /* Bordas menores */
 
-
-
-
-    
             display: flex;
             align-items: center;
             gap: 15px;
@@ -80,6 +73,7 @@
             height: 100px;
             border-radius: 5px;
         }
+
         .tituloMusica {
             font-size: 1.2em;
             color: #333ed6af;
@@ -87,57 +81,66 @@
         }
 
         .carousel-container {
-    position: relative;
-    width: 300px; /* Ajuste a largura conforme necessário */
-    margin: auto;
-    overflow: hidden;
-}
+            position: relative;
+            width: 300px;
+            /* Ajuste a largura conforme necessário */
+            margin: auto;
+            overflow: hidden;
+        }
 
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: max-content; /* Garante que todas as imagens sejam posicionadas corretamente */
-}
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: max-content;
+            /* Garante que todas as imagens sejam posicionadas corretamente */
+        }
 
-.carousel img {
-    width: 300px; /* Ajusta todas as imagens ao mesmo tamanho */
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-    flex: 0 0 300px; /* Faz com que cada imagem ocupe exatamente 300px de largura */
-}
+        .carousel img {
+            width: 300px;
+            /* Ajusta todas as imagens ao mesmo tamanho */
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            flex: 0 0 300px;
+            /* Faz com que cada imagem ocupe exatamente 300px de largura */
+        }
 
 
 
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-}
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+        }
 
-.prev { left: 0; }
-.next { right: 0; }
+        .prev {
+            left: 0;
+        }
 
+        .next {
+            right: 0;
+        }
     </style>
 </head>
 
 
 
-   
-  
+
+
 <body>
     <br> <!-- o que esse br faz? -->
-   
-      <div class="music-container">
+
+    <div class="music-container">
         <img src="Fotos/jorgeBen.jpeg" alt="Capa do álbum" class="album-cover">
 
-        <p class = "tituloMusica">
+        <p class="tituloMusica">
             <strong>Jorge Ben Jor - Me Chamando de Paixão</strong>
         </p>
         <audio controls>
@@ -145,77 +148,78 @@
             Seu navegador não suporta áudio.
         </audio>
     </div>
-     <p>Hoje é um dia especial, e eu quero celebrar o nosso amor com você. Você é a razão do meu sorriso e a luz dos meus dias. Que possamos sempre compartilhar momentos felizes juntos.</p>
+    <p>Hoje é um dia especial, e eu quero celebrar o nosso amor com você. Você é a razão do meu sorriso e a luz dos meus
+        dias. Que possamos sempre compartilhar momentos felizes juntos.</p>
 
-    
 
 
-<div class="carousel-container">
-    <button class="prev" onclick="prevSlide()">❮</button>
-    <div class="carousel">
-        <img src="Fotos/LIA E CAROL/IMAGEM 1.jpg" alt="Imagem 1">
-        <img src="Fotos/LIA E CAROL/IMAGEM 2.jpg" alt="Imagem 2">
-        <img src="Fotos/LIA E CAROL/IMAGEM 3.jpg" alt="Imagem 3">
-        <img src ="Fotos/LIA E CAROL/IMAGEM 3(1).jpg" alt="Imagem 4">
-        <img src="Fotos/LIA E CAROL/IMAGEM 4.jpg" alt="Imagem 4">
-        <img src="Fotos/LIA E CAROL/IMAGEM 5.jpg" alt="Imagem 5">
-        <img src="Fotos/LIA E CAROL/IMAGEM 6.jpg" alt="Imagem 6">
-        <img src="Fotos/LIA E CAROL/IMAGEM 7.jpg" alt="Imagem 7">
-        <img src="Fotos/LIA E CAROL/IMAGEM 8.jpg" alt="Imagem 8">
-        <img src="Fotos/LIA E CAROL/IMAGEM 9.jpg" alt="Imagem 9">
-        <img src="Fotos/LIA E CAROL/IMAGEM 10.jpg" alt="Imagem 10">
-        <img src="Fotos/LIA E CAROL/IMAGEM 11.jpg" alt="Imagem 11">
-        <img src="Fotos/LIA E CAROL/IMAGEM 12.jpg" alt="Imagem 12">
-        <img src="Fotos/LIA E CAROL/IMAGEM 13.jpg" alt="Imagem 13">
-        <img src="Fotos/LIA E CAROL/IMAGEM 14.jpg" alt="Imagem 14">
-        <img src="Fotos/LIA E CAROL/IMAGEM 15.jpg" alt="Imagem 15">
-        <img src="Fotos/LIA E CAROL/IMAGEM 16.jpg" alt="Imagem 16">
-        <img src="Fotos/LIA E CAROL/IMAGEM 17.jpg" alt="Imagem 17">
-        <img src="Fotos/LIA E CAROL/IMAGEM 18.jpg" alt="Imagem 18">
-        <img src="Fotos/LIA E CAROL/IMAGEM 19.jpg" alt="Imagem 19">
-        <img src="Fotos/LIA E CAROL/IMAGEM 20.jpg" alt="Imagem 20">
-        <img src="Fotos/LIA E CAROL/IMAGEM 21.jpg" alt="Imagem 21">
-        <img src="Fotos/LIA E CAROL/IMAGEM 22.jpg" alt="Imagem 22">
-        <img src="Fotos/LIA E CAROL/IMAGEM 23.jpg" alt="Imagem 23">
-        <img src="Fotos/LIA E CAROL/IMAGEM 24.jpg" alt="Imagem 24">
-        <img src="Fotos/LIA E CAROL/IMAGEM 25.jpg" alt="Imagem 25">
+
+    <div class="carousel-container">
+        <button class="prev" onclick="prevSlide()">❮</button>
+        <div class="carousel">
+            <img src="Fotos/LIA E CAROL/IMAGEM 1.jpg" alt="Imagem 1">
+            <img src="Fotos/LIA E CAROL/IMAGEM 2.jpg" alt="Imagem 2">
+            <img src="Fotos/LIA E CAROL/IMAGEM 3.jpg" alt="Imagem 3">
+            <img src="Fotos/LIA E CAROL/IMAGEM 3(1).jpg" alt="Imagem 4">
+            <img src="Fotos/LIA E CAROL/IMAGEM 4.jpg" alt="Imagem 4">
+            <img src="Fotos/LIA E CAROL/IMAGEM 5.jpg" alt="Imagem 5">
+            <img src="Fotos/LIA E CAROL/IMAGEM 6.jpg" alt="Imagem 6">
+            <img src="Fotos/LIA E CAROL/IMAGEM 7.jpg" alt="Imagem 7">
+            <img src="Fotos/LIA E CAROL/IMAGEM 8.jpg" alt="Imagem 8">
+            <img src="Fotos/LIA E CAROL/IMAGEM 9.jpg" alt="Imagem 9">
+            <img src="Fotos/LIA E CAROL/IMAGEM 10.jpg" alt="Imagem 10">
+            <img src="Fotos/LIA E CAROL/IMAGEM 11.jpg" alt="Imagem 11">
+            <img src="Fotos/LIA E CAROL/IMAGEM 12.jpg" alt="Imagem 12">
+            <img src="Fotos/LIA E CAROL/IMAGEM 13.jpg" alt="Imagem 13">
+            <img src="Fotos/LIA E CAROL/IMAGEM 14.jpg" alt="Imagem 14">
+            <img src="Fotos/LIA E CAROL/IMAGEM 15.jpg" alt="Imagem 15">
+            <img src="Fotos/LIA E CAROL/IMAGEM 16.jpg" alt="Imagem 16">
+            <img src="Fotos/LIA E CAROL/IMAGEM 17.jpg" alt="Imagem 17">
+            <img src="Fotos/LIA E CAROL/IMAGEM 18.jpg" alt="Imagem 18">
+            <img src="Fotos/LIA E CAROL/IMAGEM 19.jpg" alt="Imagem 19">
+            <img src="Fotos/LIA E CAROL/IMAGEM 20.jpg" alt="Imagem 20">
+            <img src="Fotos/LIA E CAROL/IMAGEM 21.jpg" alt="Imagem 21">
+            <img src="Fotos/LIA E CAROL/IMAGEM 22.jpg" alt="Imagem 22">
+            <img src="Fotos/LIA E CAROL/IMAGEM 23.jpg" alt="Imagem 23">
+            <img src="Fotos/LIA E CAROL/IMAGEM 24.jpg" alt="Imagem 24">
+            <img src="Fotos/LIA E CAROL/IMAGEM 25.jpg" alt="Imagem 25">
+        </div>
+        <button class="next" onclick="nextSlide()">❯</button>
     </div>
-    <button class="next" onclick="nextSlide()">❯</button>
-</div>
 
-<script>
-  let currentIndex = 0;
-const images = document.querySelectorAll(".carousel img");
-const totalImages = images.length;
-const carousel = document.querySelector(".carousel");
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll(".carousel img");
+        const totalImages = images.length;
+        const carousel = document.querySelector(".carousel");
 
-function updateCarousel() {
-    const imageWidth = images[0].clientWidth; // Obtém a largura correta
-    carousel.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
-}
+        function updateCarousel() {
+            const imageWidth = images[0].clientWidth; // Obtém a largura correta
+            carousel.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
+        }
 
-function nextSlide() {
-    if (currentIndex < totalImages - 1) {
-        currentIndex++;
-    } else {
-        currentIndex = 0; // Reinicia no início quando chega ao final
-    }
-    updateCarousel();
-}
+        function nextSlide() {
+            if (currentIndex < totalImages - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Reinicia no início quando chega ao final
+            }
+            updateCarousel();
+        }
 
-function prevSlide() {
-    if (currentIndex > 0) {
-        currentIndex--;
-    } else {
-        currentIndex = totalImages - 1; // Volta para a última imagem quando chega no início
-    }
-    updateCarousel();
-}
+        function prevSlide() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = totalImages - 1; // Volta para a última imagem quando chega no início
+            }
+            updateCarousel();
+        }
 
-window.addEventListener("resize", updateCarousel); // Ajusta caso a tela seja redimensionada
+        window.addEventListener("resize", updateCarousel); // Ajusta caso a tela seja redimensionada
 
 
-</script>
+    </script>
 
 
 
