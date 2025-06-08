@@ -51,28 +51,32 @@
         }
 
         .music-container {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 177, 232, 0.363);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(216, 189, 205, 0.842);
+    width: 100%; /* Faz o bloco ocupar toda a largura */
+    max-width: 550px; /* Limita a largura máxima do bloco */
+    margin: 20px auto; /* Centraliza o bloco na página */
+    top: 20px; /* Ajusta a posição do bloco */
+    right: 0;
+    left: 0;
+}
 
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            /* Espaço entre imagem e player */
-            justify-content: center;
-            background-color: rgba(255, 177, 232, 0.363);
-            /* Fundo branco */
-            padding: 10px;
-            /* Espaço interno para aumentar a borda */
-            border-radius: 15px;
-            /* Arredonda as bordas */
-            box-shadow: 0px 0px 10px rgba(216, 189, 205, 0.842);
-            /* Um leve efeito para destacar */
-        }
+.album-cover {
+    width: 80px; /* Reduz o tamanho da capa */
+    height: 80px;
+    border-radius: 5px;
+}
 
+audio {
+    width: 90%; /* Faz o player ocupar quase toda a largura */
+}
 
-        .album-cover {
-            width: 100px;
-            height: 100px;
-            border-radius: 5px;
-        }
 
         .tituloMusica {
             font-size: 1.2em;
