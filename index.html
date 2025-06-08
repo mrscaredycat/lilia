@@ -49,21 +49,41 @@
             border-radius: 10px;
             /* Arredonda as bordas */
         }
+
+        .music-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            /* Espaço entre imagem e player */
+        }
+
+        .album-cover {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
 <body>
     <h1>Feliz Dia dos Namorados, minha princesa !</h1>
-    <p>Preparei isso com carinho só pra você 💖</p>
+     <div class="music-container">
+        <img src="Fotos/jorgeBen.jpeg" alt="Capa do álbum" class="album-cover">
+
+        <p><strong>Jorge Ben Jor - Me Chamando de Paixão</strong></p>
+        <audio controls>
+            <source src="Audio/Me Chamando de Paixão.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio.
+        </audio>
+    </div>
+
+    
     <img src="https://via.placeholder.com/500x300.png?text=Nos+dois" alt="Foto nossa">
 
 
-    <p>Nossa música especial:</p>
 
-    <audio controls>
-        <source src="Audio/Me Chamando de Paixão.mp3" type="audio/mpeg">
-        Seu navegador não suporta áudio.
-    </audio>
+
+   
 
 </body>
 
