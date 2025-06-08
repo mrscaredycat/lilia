@@ -89,15 +89,17 @@
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-
+    width: max-content; /* Garante que todas as imagens sejam posicionadas corretamente */
 }
 
 .carousel img {
-    width: 100%; /* Faz com que cada imagem ocupe toda a área disponível */
-    height: auto; /* Mantém a proporção original */
-    max-height: 400px; /* Ajusta conforme necessário para evitar imagens muito grandes */
-    object-fit: cover; /* Faz com que a imagem preencha sem distorcer */
+    width: 300px; /* Ajusta todas as imagens ao mesmo tamanho */
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    flex: 0 0 300px; /* Faz com que cada imagem ocupe exatamente 300px de largura */
 }
+
 
 
 .prev, .next {
@@ -138,7 +140,7 @@
     </div>
      <p>Hoje é um dia especial, e eu quero celebrar o nosso amor com você. Você é a razão do meu sorriso e a luz dos meus dias. Que possamos sempre compartilhar momentos felizes juntos.</p>
 
-    <img src="https://via.placeholder.com/500x300.png?text=Nos+dois" alt="Foto nossa">
+    
 
 
 <div class="carousel-container">
@@ -175,28 +177,37 @@
 </div>
 
 <script>
-    let currentIndex = 0;
-    const images = document.querySelectorAll(".carousel img");
-    const totalImages = images.length;
+  let currentIndex = 0;
+const images = document.querySelectorAll(".carousel img");
+const totalImages = images.length;
+const carousel = document.querySelector(".carousel");
 
-    function updateCarousel() {
-        const carousel = document.querySelector(".carousel");
-        carousel.style.transform = `translateX(${-currentIndex * 300}px)`;
-    }
+function updateCarousel() {
+    const imageWidth = images[0].clientWidth; // Obtém a largura correta
+    carousel.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
+}
 
-    function nextSlide() {
-        if (currentIndex < totalImages - 1) {
-            currentIndex++;
-            updateCarousel();
-        }
+function nextSlide() {
+    if (currentIndex < totalImages - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0; // Reinicia no início quando chega ao final
     }
+    updateCarousel();
+}
 
-    function prevSlide() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-        }
+function prevSlide() {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = totalImages - 1; // Volta para a última imagem quando chega no início
     }
+    updateCarousel();
+}
+
+window.addEventListener("resize", updateCarousel); // Ajusta caso a tela seja redimensionada
+
+
 </script>
 
 
