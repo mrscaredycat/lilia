@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Feliz Dia dos Namorados </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- para ficar bonito no celular -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 
     <!-- parte do CSS -->
     <style>
@@ -23,7 +24,13 @@
         }
 
         p {
+            
             font-size: 1.2em;
+           
+            margin: 20px 0;
+            text-align: justify; /* Alinha o texto de forma justificada */
+            color: #d63384;
+           
         }
 
         img {
@@ -80,7 +87,7 @@ audio {
 
         .tituloMusica {
             font-size: 1.2em;
-            color: #333ed6af;
+            color: #1731a7d0;
             margin-top: 10px;
         }
 
@@ -131,6 +138,18 @@ audio {
         .next {
             right: 0;
         }
+        #cronometro {
+    font-size: 1.5em; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto mais destacado */
+    color: #d63384; /* Cor vibrante */
+    background-color: #ffeef8; /* Fundo suave */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    display: inline-block; /* Mantém um tamanho ajustado */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Efeito de profundidade */
+    margin-top: 20px; /* Espaço acima */
+}
+
     </style>
 </head>
 
@@ -152,8 +171,11 @@ audio {
             Seu navegador não suporta áudio.
         </audio>
     </div>
-    <p>Hoje é um dia especial, e eu quero celebrar o nosso amor com você. Você é a razão do meu sorriso e a luz dos meus
-        dias. Que possamos sempre compartilhar momentos felizes juntos.</p>
+    <br>
+    <br>
+
+
+    <p>A nossa historia contada em fotos de como tudo começou ate agora: </p>
 
 
 
@@ -191,6 +213,17 @@ audio {
         <button class="next" onclick="nextSlide()">❯</button>
     </div>
 
+<p> Vivendo um sonho acordada há: </p>
+    <p id="cronometro"></p>
+
+
+
+
+
+
+
+
+
     <script>
         let currentIndex = 0;
         const images = document.querySelectorAll(".carousel img");
@@ -221,7 +254,21 @@ audio {
         }
 
         window.addEventListener("resize", updateCarousel); // Ajusta caso a tela seja redimensionada
+function atualizarCronometro() {
+        const dataInicial = new Date("March 23, 2025 00:00:00"); // Data de início
+        const agora = new Date(); // Data atual
 
+        const diferenca = agora - dataInicial; // Diferença em milissegundos
+
+        const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+        document.getElementById("cronometro").innerHTML = 
+            ` ${dias} dias, ${horas} horas, ${minutos} minutos, ${segundos} segundos`;
+    }
+    setInterval(atualizarCronometro, 1000); // Atualiza a cada segundo
 
     </script>
 
