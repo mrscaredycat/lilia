@@ -6,6 +6,8 @@
     <title>Feliz Dia dos Namorados </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- para ficar bonito no celular -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Fotos/SYLVANIAN/sylvanian icon 3.jpg">
+
 
     <!-- parte do CSS -->
     <style>
@@ -85,7 +87,7 @@
 
         .music-container {
             display: flex;
-            /*position: relative;*/ 
+            /*position: relative;*/
             flex-direction: column;
             /* Organiza os elementos verticalmente */
             align-items: center;
@@ -102,7 +104,7 @@
             /* Centraliza o bloco na página */
             top: 20px;
             /* Ajusta a posição do bloco */
-            position: relative
+            position: relative;
             right: 0;
             left: 0;
         }
@@ -131,8 +133,9 @@
 
         .carousel-container {
             position: relative;
-            width: 300px;
-            /* Ajuste a largura conforme necessário */
+            width: 100%;
+            /* Ajusta ao tamanho da tela */
+            max-width: 300px;
             margin: auto;
             overflow: hidden;
         }
@@ -167,14 +170,16 @@
             font-size: 24px;
             cursor: pointer;
             padding: 10px;
+            z-index: 10;
+            /* Mantém os botões na frente */
         }
 
         .prev {
-            left: 0;
+            left: 10px;
         }
 
         .next {
-            right: 0;
+            right: 10px;
         }
 
         #cronometro {
@@ -221,13 +226,13 @@
     <br>
     <br>
 
-<h1> Feliz dia dos namorados, minha princesa ★ </h1>
-    
+    <h1> Feliz dia dos namorados, minha princesa ★ </h1>
 
-<img src="Fotos/SYLVANIAN/sylvanian festa.png" alt="Sylvanian Festa" width="200" height="200">
 
-<br>
-<h1> Me apaixonando por você, em ordem cronológica: </h1>
+    <img src="Fotos/SYLVANIAN/sylvanian festa.png" alt="Sylvanian Festa" width="200" height="200">
+
+    <br>
+    <h1> Me apaixonando por você, em ordem cronológica: </h1>
 
 
     <div class="carousel-container">
@@ -273,11 +278,11 @@
         adipisci!</h2>
 
     <br>
-   
+
     <img src="Fotos/SYLVANIAN/sylvanian casal sem fundo.png" alt="Sylvanian Casal" width="300" height="300">
     <br>
 
-     <p id="cronometro"></p>    
+    <p id="cronometro"></p>
 
     <script>
         let currentIndex = 0;
@@ -291,24 +296,18 @@
         }
 
         function nextSlide() {
-            if (currentIndex < totalImages - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0; // Reinicia no início quando chega ao final
-            }
+            currentIndex = (currentIndex + 1) % totalImages; // Avança sempre, reinicia no início
             updateCarousel();
         }
 
         function prevSlide() {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = totalImages - 1; // Volta para a última imagem quando chega no início
-            }
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Volta sempre, reinicia no fim
             updateCarousel();
         }
 
         window.addEventListener("resize", updateCarousel); // Ajusta caso a tela seja redimensionada
+
+
         function atualizarCronometro() {
             const dataInicial = new Date("March 23, 2025 00:00:00"); // Data de início
             const agora = new Date(); // Data atual
