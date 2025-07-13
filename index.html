@@ -202,15 +202,34 @@
             margin-top: 20px;
             /* Espaço acima */
         }
-
+#contador{
+     font-size: 1.5em;
+            /* Aumenta o tamanho da fonte */
+            font-weight: bold;
+            /* Deixa o texto mais destacado */
+            color: #0052CC;
+            /* Cor vibrante */
+            background-color: rgba(255, 177, 232, 0.363);
+            /* Fundo suave */
+            padding: 10px 20px;
+            /* Espaçamento interno */
+            border-radius: 10px;
+            /* Bordas arredondadas */
+            display: inline-block;
+            /* Mantém um tamanho ajustado */
+            box-shadow: 0px 0px 10px rgba(196, 52, 138, 0.842);
+            /* Efeito de profundidade */
+            margin-top: 20px;
+            /* Espaço acima */
+}
         .love-message {
-         
+
             /* Degradê suave e romântico */
             padding: 20px;
             /* Adiciona espaço interno */
             border-radius: 15px;
             /* Deixa o bloco arredondado */
-             box-shadow: 0px 0px 10px rgba(196, 52, 138, 0.842);
+            box-shadow: 0px 0px 10px rgba(196, 52, 138, 0.842);
             /* Adiciona um efeito de profundidade */
             text-align: center;
             max-width: 600px;
@@ -226,7 +245,7 @@
 
 
 <body>
-    <br> 
+    <br>
 
     <div class="music-container">
         <img src="Fotos/jorgeBen.jpeg" alt="Capa do álbum" class="album-cover">
@@ -304,11 +323,13 @@
     </div>
 
     <img src="Fotos/SYLVANIAN/sylvanian casal sem fundo.png" alt="Sylvanian Casal" width="300" height="300">
- 
+
 
 
     <p id="cronometro"></p>
-
+    <br>
+    <h1> Contando as horas para te ver: </h1>
+    <h2 id="contador"></h2>
     <script>
         let currentIndex = 0;
         const images = document.querySelectorAll(".carousel img");
@@ -349,6 +370,22 @@
         }
         setInterval(atualizarCronometro, 1000); // Atualiza a cada segundo
 
+        function atualizarContador() {
+            const hoje = new Date();
+            const alvo = new Date('2025-07-30T00:00:00');
+            const restante = alvo - hoje;
+
+            const dias = Math.floor(restante / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((restante / (1000 * 60 * 60)) % 24);
+            const minutos = Math.floor((restante / (1000 * 60)) % 60);
+            const segundos = Math.floor((restante / 1000) % 60);
+
+            document.getElementById('contador').textContent =
+                `${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+        }
+
+        atualizarContador(); // Chama uma vez ao carregar
+        setInterval(atualizarContador, 1000); // Atualiza a cada segundo
     </script>
 
 
